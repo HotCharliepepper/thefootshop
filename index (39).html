@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>더풋샵 김포한강구래점 · 검색 신뢰 강화 &amp; 예약 전환 운영 플랜 | Weplace</title>
+<meta name="description" content="블로그를 더 쓰는 게 아니라, 검색 후 예약까지 이어지는 구조를 만드는 1년 운영 제안. 네이버 플레이스·블로그·구글·인스타그램을 함께 정비합니다. 1분기부터 단계적으로.">
+
+<!-- Canonical / base domain -->
+<link rel="canonical" href="https://thefootshop.netlify.app/">
+
+<!-- Open Graph (KakaoTalk / Facebook 공유 카드) -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://thefootshop.netlify.app/">
+<meta property="og:title" content="더풋샵 김포한강구래점 · 검색 신뢰 강화 & 예약 전환 운영 플랜">
+<meta property="og:description" content="검색하고, 안심하고, 예약까지 — 1년 운영 제안. 1분기 220만 원부터 단계적으로 시작합니다.">
+<meta property="og:image" content="https://thefootshop.netlify.app/og-image.png">
+<meta property="og:image:secure_url" content="https://thefootshop.netlify.app/og-image.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="WEPLACE 운영 제안 · 더풋샵 김포한강구래점">
+<meta property="og:site_name" content="Weplace">
+<meta property="og:locale" content="ko_KR">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="더풋샵 김포한강구래점 · 검색 신뢰 강화 & 예약 전환 운영 플랜">
+<meta name="twitter:description" content="검색하고, 안심하고, 예약까지 — 1년 운영 제안.">
+<meta name="twitter:image" content="https://thefootshop.netlify.app/og-image.png">
+
+<!-- iOS / mobile -->
+<meta name="theme-color" content="#11261B">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="더풋샵 운영 제안">
+<meta name="format-detection" content="telephone=no">
+
+<!-- Favicon (inline green mark) -->
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2311261B'/%3E%3Ccircle cx='32' cy='32' r='13' fill='%2303C75A'/%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fastly.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://fastly.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
+<style>
+  :root{
+    --green:#03C75A;
+    --green-deep:#02934A;
+    --green-soft:#E7F7EE;
+    --ink:#23211C;
+    --ink-soft:#5C574E;
+    --ink-faint:#8A8478;
+    --cream:#FBF7EF;
+    --cream-2:#F4EDE0;
+    --beige:#EFE6D4;
+    --line:#E6DDCB;
+    --white:#FFFFFF;
+    --gold:#B8924A;
+    --shadow:0 8px 30px rgba(60,50,30,.08);
+    --shadow-soft:0 4px 16px rgba(60,50,30,.06);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;text-size-adjust:100%}
+  html,body{overflow-x:hidden;max-width:100%}
+  body{
+    font-family:'Pretendard',-apple-system,sans-serif;
+    background:var(--cream);
+    color:var(--ink);
+    line-height:1.72;
+    -webkit-font-smoothing:antialiased;
+    letter-spacing:-.01em;
+  }
+  .wrap{max-width:560px;margin:0 auto;background:var(--cream);overflow:hidden}
+  section{padding:64px 26px}
+  .eyebrow{
+    display:inline-block;font-size:12px;font-weight:700;letter-spacing:.14em;
+    text-transform:uppercase;color:var(--green-deep);
+    background:var(--green-soft);padding:6px 13px;border-radius:100px;margin-bottom:18px;
+  }
+  h1,h2,h3{letter-spacing:-.025em;line-height:1.32}
+  .lead{font-size:14px;color:var(--ink-soft);font-weight:500}
+  .accent{color:var(--green-deep)}
+
+  /* ===== HERO ===== */
+  .hero{
+    background:
+      radial-gradient(120% 80% at 80% -10%, rgba(3,199,90,.10), transparent 60%),
+      linear-gradient(180deg,#1C1A16 0%, #26231D 100%);
+    color:#F3EEE3;padding:62px 26px 56px;position:relative;overflow:hidden;
+  }
+  .hero::after{
+    content:"";position:absolute;left:-40%;bottom:-30%;width:120%;height:60%;
+    background:radial-gradient(closed at 50% 50%, rgba(3,199,90,.18), transparent 70%);
+    background:radial-gradient(50% 50% at 50% 50%, rgba(3,199,90,.16), transparent 70%);
+    filter:blur(10px);
+  }
+  .hero .brand{display:flex;align-items:center;gap:10px;margin-bottom:46px;position:relative;z-index:2}
+  .hero .brand .dot{width:9px;height:9px;border-radius:50%;background:var(--green);box-shadow:0 0 14px rgba(3,199,90,.8)}
+  .hero .brand .name{font-size:15px;font-weight:700;letter-spacing:.32em;color:#EDE7DA}
+  .hero .brand .for{margin-left:auto;font-size:11px;color:#A39C8C;letter-spacing:.02em}
+  .hero .kicker{position:relative;z-index:2;font-size:13px;color:var(--green);font-weight:700;letter-spacing:.04em;margin-bottom:16px}
+  .hero h1{position:relative;z-index:2;font-size:33px;font-weight:800;color:#FFFDF8;line-height:1.34}
+  .hero h1 b{color:var(--green);font-weight:800}
+  .hero .sub{position:relative;z-index:2;margin-top:22px;font-size:15px;color:#C9C2B2;line-height:1.74;max-width:420px}
+  .hero .meta{position:relative;z-index:2;margin-top:34px;padding-top:22px;border-top:1px solid rgba(255,255,255,.12);display:flex;flex-wrap:wrap;gap:7px 8px}
+  .hero .meta span{font-size:12px;color:#B9B2A2;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);padding:5px 11px;border-radius:8px}
+
+  /* ===== STORE SNAPSHOT ===== */
+  .snap{background:var(--white);border-top:1px solid var(--line)}
+  .snap h2{font-size:23px;font-weight:800;margin-bottom:8px}
+  .stat-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:26px}
+  .stat{background:var(--cream);border:1px solid var(--line);border-radius:16px;padding:20px 18px}
+  .stat .num{font-size:28px;font-weight:800;color:var(--ink);line-height:1}
+  .stat .num small{font-size:14px;font-weight:700;color:var(--ink-faint)}
+  .stat .lab{margin-top:8px;font-size:13px;color:var(--ink-soft);font-weight:500}
+  .asset-line{margin-top:24px;background:var(--green-soft);border-radius:14px;padding:18px 18px;font-size:14px;color:#1D6F44;font-weight:600;line-height:1.66}
+  .asset-line b{font-weight:800}
+
+  /* ===== GENERIC CARD ===== */
+  .card{background:var(--white);border:1px solid var(--line);border-radius:18px;padding:24px 22px;box-shadow:var(--shadow-soft)}
+  .card + .card{margin-top:14px}
+
+  /* ===== PROBLEM / REFRAME ===== */
+  .reframe{background:var(--cream-2)}
+  .reframe h2{font-size:24px;font-weight:800;margin-bottom:14px;line-height:1.4}
+  .big-quote{font-size:20px;font-weight:800;line-height:1.5;color:var(--ink);margin:6px 0 4px}
+  .big-quote .hl{background:linear-gradient(transparent 58%, rgba(3,199,90,.28) 58%);padding:0 2px}
+  .vs-row{display:grid;grid-template-columns:1fr;gap:12px;margin-top:26px}
+  .vs-box{border-radius:16px;padding:20px;border:1px solid var(--line)}
+  .vs-box .tag{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-bottom:10px;display:inline-block;padding:4px 10px;border-radius:7px}
+  .vs-box.old{background:var(--white)}
+  .vs-box.old .tag{background:#F0EBE0;color:var(--ink-faint)}
+  .vs-box.old p{font-size:15px;color:var(--ink-soft);font-weight:600}
+  .vs-box.new{background:#11261B;border-color:#11261B;color:#EAF6EE}
+  .vs-box.new .tag{background:rgba(3,199,90,.2);color:var(--green)}
+  .vs-box.new p{font-size:16px;color:#F2FBF5;font-weight:700;line-height:1.6}
+  .vs-arrow{text-align:center;color:var(--green-deep);font-size:18px;font-weight:800}
+
+  /* ===== COMPARISON TABLE ===== */
+  .compare h2{font-size:24px;font-weight:800;margin-bottom:10px}
+  .ctable{margin-top:24px;border:1px solid var(--line);border-radius:18px;overflow:hidden;background:var(--white)}
+  .ctable .chead{display:grid;grid-template-columns:1fr 1fr;background:var(--cream-2)}
+  .ctable .chead div{padding:16px 14px;font-size:13px;font-weight:800;text-align:center}
+  .ctable .chead .h-old{color:var(--ink-faint);border-right:1px solid var(--line)}
+  .ctable .chead .h-new{color:var(--green-deep);background:var(--green-soft)}
+  .crow{border-top:1px solid var(--line)}
+  .crow .rlabel{padding:11px 14px;font-size:11px;font-weight:700;letter-spacing:.04em;color:var(--ink-faint);background:var(--cream);text-transform:uppercase}
+  .crow .rcells{display:grid;grid-template-columns:1fr 1fr}
+  .crow .rcells div{padding:14px;font-size:13.5px;line-height:1.55}
+  .crow .c-old{color:var(--ink-soft);border-right:1px solid var(--line)}
+  .crow .c-new{color:var(--ink);font-weight:600;background:rgba(3,199,90,.045)}
+  .crow .c-new b{color:var(--green-deep)}
+
+  /* ===== REFERENCE ===== */
+  .ref{background:var(--white);border-top:1px solid var(--line)}
+  .ref h2{font-size:23px;font-weight:800;margin-bottom:12px}
+  .ref-card{margin-top:20px;background:linear-gradient(180deg,#FBF7EF,#F4EDE0);border:1px solid var(--line);border-radius:18px;padding:24px 22px}
+  .ref-card .rname{font-size:17px;font-weight:800;color:var(--ink)}
+  .ref-card .rtag{font-size:12px;color:var(--gold);font-weight:700;margin-top:4px;letter-spacing:.02em}
+  .ref-card p{font-size:14px;color:var(--ink-soft);margin-top:14px;line-height:1.74}
+  .ref-card .rgrid{display:flex;gap:10px;margin-top:18px;flex-wrap:wrap}
+  .ref-card .rgrid span{font-size:12px;background:var(--white);border:1px solid var(--line);padding:7px 12px;border-radius:9px;color:var(--ink);font-weight:600}
+  .bridge{margin-top:18px;background:#11261B;color:#EAF6EE;border-radius:16px;padding:22px;font-size:15px;line-height:1.72;font-weight:600}
+  .bridge .hl{color:var(--green)}
+  .note{margin-top:14px;font-size:12px;color:var(--ink-faint);line-height:1.6}
+
+  /* ===== PLAN / QUARTERS ===== */
+  .plan{background:var(--cream-2)}
+  .plan h2{font-size:24px;font-weight:800;margin-bottom:8px}
+  .qcard{position:relative;background:var(--white);border:1px solid var(--line);border-radius:18px;padding:24px 22px 22px;margin-top:16px;box-shadow:var(--shadow-soft)}
+  .qcard::before{content:"";position:absolute;left:0;top:24px;bottom:24px;width:4px;border-radius:0 4px 4px 0;background:var(--green)}
+  .qhead{display:flex;align-items:baseline;gap:10px}
+  .qno{font-size:12px;font-weight:800;color:var(--green-deep);background:var(--green-soft);padding:4px 10px;border-radius:7px;letter-spacing:.04em}
+  .qtitle{font-size:18px;font-weight:800;color:var(--ink)}
+  .qgoal{margin-top:12px;font-size:14px;color:var(--ink-soft);line-height:1.7}
+  .qlist{margin-top:14px;list-style:none;display:flex;flex-direction:column;gap:7px}
+  .qlist li{font-size:13.5px;color:var(--ink);padding-left:20px;position:relative;line-height:1.6}
+  .qlist li::before{content:"";position:absolute;left:2px;top:9px;width:6px;height:6px;border-radius:50%;background:var(--green)}
+  .qprice{margin-top:18px;padding-top:16px;border-top:1px dashed var(--line);display:flex;align-items:center;justify-content:space-between}
+  .qprice .qp-lab{font-size:12px;color:var(--ink-faint);font-weight:600}
+  .qprice .qp-val{font-size:21px;font-weight:800;color:var(--ink)}
+  .qprice .qp-val small{font-size:13px;color:var(--ink-faint);font-weight:600}
+  .scale-hint{margin-top:22px;font-size:13px;color:var(--ink-soft);background:var(--white);border:1px solid var(--line);border-radius:14px;padding:16px 18px;line-height:1.66}
+  .scale-hint b{color:var(--green-deep)}
+
+  /* ===== INCLUDED ===== */
+  .incl{background:var(--white);border-top:1px solid var(--line)}
+  .incl h2{font-size:23px;font-weight:800;margin-bottom:8px}
+  .incl-grid{margin-top:24px;display:flex;flex-direction:column;gap:10px}
+  .incl-item{display:flex;gap:14px;align-items:flex-start;background:var(--cream);border:1px solid var(--line);border-radius:14px;padding:16px 16px}
+  .incl-item .ic{flex:none;width:34px;height:34px;border-radius:10px;background:var(--green-soft);color:var(--green-deep);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:15px}
+  .incl-item .it{font-size:14.5px;font-weight:700;color:var(--ink)}
+  .incl-item .id{font-size:12.5px;color:var(--ink-soft);margin-top:3px;line-height:1.55}
+
+  /* ===== ANNUAL SUMMARY ===== */
+  .annual{background:var(--cream-2)}
+  .annual-card{background:#1C1A16;color:#F3EEE3;border-radius:20px;padding:30px 24px;box-shadow:var(--shadow)}
+  .annual-card .at{font-size:13px;color:#A39C8C;font-weight:600;letter-spacing:.04em}
+  .annual-rows{margin-top:18px;display:flex;flex-direction:column;gap:2px}
+  .annual-rows .ar{display:flex;justify-content:space-between;padding:11px 0;border-bottom:1px solid rgba(255,255,255,.1);font-size:14px}
+  .annual-rows .ar span:first-child{color:#C9C2B2}
+  .annual-rows .ar span:last-child{font-weight:700;color:#F3EEE3}
+  .annual-total{margin-top:20px;background:rgba(3,199,90,.12);border:1px solid rgba(3,199,90,.3);border-radius:14px;padding:18px 18px;display:flex;align-items:baseline;justify-content:space-between}
+  .annual-total .tl{font-size:13px;color:#BEEBCF;font-weight:700}
+  .annual-total .tv{font-size:25px;font-weight:800;color:#fff}
+  .annual-total .tv small{font-size:12px;font-weight:600;color:#9FD9B4}
+
+  /* ===== CTA ===== */
+  .cta{background:linear-gradient(180deg,#11261B 0%, #0C1C14 100%);color:#EAF6EE;text-align:center}
+  .cta h2{font-size:25px;font-weight:800;line-height:1.42;color:#FFFDF8}
+  .cta p{margin-top:14px;font-size:14px;color:#A9C2B3;line-height:1.7}
+  .btns{margin-top:30px;display:flex;flex-direction:column;gap:12px}
+  .btn{display:block;padding:18px;border-radius:14px;font-size:15px;font-weight:800;text-decoration:none;transition:transform .15s ease}
+  .btn:active{transform:scale(.98)}
+  .btn-primary{background:var(--green);color:#06281A}
+  .btn-ghost{background:transparent;border:1px solid rgba(255,255,255,.22);color:#EAF6EE}
+  .cta .contact{margin-top:30px;font-size:12px;color:#7E9488;line-height:1.8;letter-spacing:.02em}
+
+  footer{background:#0C1C14;color:#5E7268;text-align:center;padding:26px;font-size:11px;letter-spacing:.04em;line-height:1.7}
+
+  /* locked quarter price */
+  .qp-locked{font-size:13px;font-weight:700;color:var(--ink-faint);background:var(--cream);border:1px dashed var(--line);padding:7px 12px;border-radius:9px;line-height:1.4;text-align:right}
+  .qcard.locked::before{background:var(--line)}
+  .qcard.locked .qno{background:#F0EBE0;color:var(--ink-faint)}
+
+  /* payment options */
+  .pay-grid{display:flex;flex-direction:column;gap:12px;margin-top:22px}
+  .pay-opt{background:var(--white);border:1px solid var(--line);border-radius:16px;padding:20px 20px}
+  .pay-opt.reward{background:#11261B;border-color:#11261B;color:#EAF6EE;position:relative;overflow:hidden}
+  .pay-opt .po-top{display:flex;align-items:center;gap:9px}
+  .pay-opt .po-name{font-size:15px;font-weight:800;color:var(--ink)}
+  .pay-opt.reward .po-name{color:#FFFDF8}
+  .pay-opt .po-badge{font-size:11px;font-weight:800;padding:4px 9px;border-radius:7px;background:var(--green-soft);color:var(--green-deep)}
+  .pay-opt.reward .po-badge{background:var(--green);color:#06281A}
+  .pay-opt .po-desc{margin-top:10px;font-size:13.5px;line-height:1.66;color:var(--ink-soft)}
+  .pay-opt.reward .po-desc{color:#C3D6CA}
+  .pay-opt .po-desc b{color:var(--green-deep)}
+  .pay-opt.reward .po-desc b{color:var(--green)}
+  .reward-big{margin-top:14px;font-size:22px;font-weight:800;color:#fff;line-height:1.3}
+  .reward-big .pct{color:var(--green)}
+  .pay-note{margin-top:16px;font-size:12px;color:var(--ink-faint);line-height:1.66}
+
+  /* search-result mockup */
+  .serp{margin-top:22px;border-radius:18px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow)}
+  .serp .serp-cap{font-size:11px;font-weight:700;letter-spacing:.04em;color:var(--ink-faint);padding:10px 14px;background:var(--cream-2);border-bottom:1px solid var(--line)}
+  .serp .serp-cap .live{color:var(--green-deep)}
+  /* naver style */
+  .nv{background:#fff;padding:14px 14px 16px}
+  .nv-bar{display:flex;align-items:center;gap:8px;border:1px solid #03C75A;border-radius:10px;padding:9px 12px}
+  .nv-bar .nv-logo{font-size:14px;font-weight:900;color:#03C75A;letter-spacing:-.02em}
+  .nv-bar .nv-q{font-size:13.5px;color:#222;font-weight:600}
+  .nv-bar .nv-mag{margin-left:auto;color:#03C75A;font-weight:800}
+  .nv-tabs{display:flex;gap:14px;margin-top:12px;font-size:11.5px;color:#999;overflow:hidden}
+  .nv-tabs b{color:#222}
+  .nv-place{margin-top:12px;border:1px solid #eee;border-radius:12px;overflow:hidden}
+  .nv-place .npl-head{font-size:11px;font-weight:800;color:#333;padding:9px 12px;border-bottom:1px solid #f1f1f1}
+  .nv-item{display:flex;gap:11px;padding:12px;border-bottom:1px solid #f3f3f3;align-items:flex-start}
+  .nv-item:last-child{border-bottom:none}
+  .nv-item.hl{background:#F0FBF4}
+  .nv-item .ni-rank{flex:none;width:18px;font-size:13px;font-weight:800;color:#03C75A;line-height:1.5}
+  .nv-item .ni-body{min-width:0;flex:1}
+  .nv-item .ni-body .ni-name{font-size:13.5px;font-weight:700;color:#1a1a1a;line-height:1.4;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .nv-item.hl .ni-body .ni-name{color:#02934A;white-space:normal;overflow:visible;text-overflow:clip}
+  .nv-item .ni-body .ni-meta{font-size:11px;color:#888;margin-top:3px}
+  .nv-item .ni-body .ni-cat{font-size:11px;color:#03C75A;font-weight:600}
+  .nv-item .ni-you{font-size:10px;font-weight:800;color:#fff;background:#03C75A;padding:2px 7px;border-radius:6px;margin-left:6px;vertical-align:middle}
+  /* google style */
+  .gg{background:#fff;padding:16px 14px;border-top:1px solid var(--line)}
+  .gg-top{display:flex;align-items:center;gap:8px;font-size:13px;color:#5f6368;font-weight:600}
+  .gg-top .gg-logo{font-size:15px;font-weight:800}
+  .gg-top .gg-logo .b1{color:#4285F4}.gg-top .gg-logo .b2{color:#EA4335}.gg-top .gg-logo .b3{color:#FBBC05}.gg-top .gg-logo .b4{color:#4285F4}.gg-top .gg-logo .b5{color:#34A853}.gg-top .gg-logo .b6{color:#EA4335}
+  .gg-card{margin-top:12px;border:1px solid #e6e6e6;border-radius:12px;padding:14px}
+  .gg-card .gc-name{font-size:14px;font-weight:700;color:#1a0dab;line-height:1.4}
+  .gg-card .gc-rate{display:flex;align-items:center;gap:6px;margin-top:6px;font-size:13px;color:#70757a}
+  .gg-card .gc-rate .stars{color:#fbbc05;letter-spacing:1px}
+  .gg-card .gc-rate b{color:#202124}
+  .gg-card .gc-sub{font-size:12px;color:#70757a;margin-top:5px}
+
+  /* reveal */
+  .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+  .reveal.in{opacity:1;transform:none}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="brand">
+      <span class="dot"></span>
+      <span class="name">WEPLACE</span>
+      <span class="for">제안 대상 · 더풋샵 김포한강구래점 대표님</span>
+    </div>
+    <div class="kicker">검색 신뢰 강화 &amp; 예약 전환 운영 플랜</div>
+    <h1>고객이 검색하고,<br>안심하고 <b>예약하기까지.</b><br>그 흐름 전체를 정비합니다.</h1>
+    <p class="sub">블로그 글 몇 개를 더 남기는 작업이 아닙니다.
+    네이버 플레이스 · 블로그 · 구글 · 인스타그램을 하나로 정리해,
+    구래동 고객이 검색 후 망설임 없이 예약하게 만드는 운영 구조 제안입니다.</p>
+    <div class="meta">
+      <span>1년 · 분기별 단계 운영</span>
+      <span>발관리 · 스포츠 · 아로마</span>
+      <span>생활권 재방문 상권</span>
+    </div>
+  </header>
+
+  <!-- SNAPSHOT -->
+  <section class="snap reveal">
+    <span class="eyebrow">현재 진단</span>
+    <h2>이미 충분한 기본 자산을<br>가진 매장입니다.</h2>
+    <p class="lead">구래동에서 오래 운영되며 쌓인 신뢰와 후기, 예약 메뉴까지.
+    새로 시작하는 매장이 아니라, <b class="accent">정비하면 바로 효과가 나는 단계</b>입니다.</p>
+
+    <div class="stat-grid">
+      <div class="stat">
+        <div class="num">149<small>건</small></div>
+        <div class="lab">네이버 방문자 리뷰</div>
+      </div>
+      <div class="stat">
+        <div class="num">322<small>건</small></div>
+        <div class="lab">블로그 리뷰</div>
+      </div>
+      <div class="stat">
+        <div class="num">4<small>종</small></div>
+        <div class="lab">예약 코스 메뉴 운영<br>(방문후 · 스포츠 · 아로마 · 밸런스)</div>
+      </div>
+      <div class="stat">
+        <div class="num">178<small>게시물</small></div>
+        <div class="lab">인스타그램 운영 중<br>(@footshop_gimpogurae)</div>
+      </div>
+    </div>
+
+    <div class="asset-line">
+      구래동에서 <b>10년 이상 사랑받아온 마사지샵</b>, 회원 다수 보유,
+      구래역 도보권(4번 출구 약 275m)이라는 접근성까지.
+      이미 가진 자산이 흩어져 있을 뿐, 부족한 매장이 아닙니다.
+    </div>
+  </section>
+
+  <!-- REFRAME -->
+  <section class="reframe reveal">
+    <span class="eyebrow">관점의 전환</span>
+    <h2>지금 필요한 건<br>“글을 더 쓰는 것”이 아닙니다.</h2>
+    <p class="lead">현재 운영은 체험단 · 블로그 중심에 가깝습니다.
+    검색 결과에 글은 쌓이지만, 정작 고객이 검색한 뒤 <b>안심하고 예약하게 만드는 구조</b>는
+    아직 더 정비할 여지가 있습니다.</p>
+
+    <div class="vs-row">
+      <div class="vs-box old">
+        <span class="tag">기존 체험단 · 블로그</span>
+        <p>검색 결과에 글을 “남기는” 작업</p>
+      </div>
+      <div class="vs-arrow">↓</div>
+      <div class="vs-box new">
+        <span class="tag">Weplace 종합 운영</span>
+        <p>검색한 고객이 “안심하고 예약하게” 만드는 흐름 전체를 정비하는 작업</p>
+      </div>
+    </div>
+
+    <p class="big-quote" style="margin-top:30px">
+      고객은 <span class="hl">검색하고, 비교하고, 안심한 뒤</span> 예약합니다.<br>
+      그 전 과정을 함께 손봐야 예약으로 이어집니다.
+    </p>
+  </section>
+
+  <!-- COMPARISON -->
+  <section class="compare reveal">
+    <span class="eyebrow">무엇이 다른가</span>
+    <h2>기존 운영 vs<br>Weplace 종합 운영</h2>
+    <p class="lead">같은 “마케팅비”처럼 보이지만, 손대는 범위가 다릅니다.</p>
+
+    <div class="ctable">
+      <div class="chead">
+        <div class="h-old">기존 체험단 · 블로그</div>
+        <div class="h-new">Weplace 종합 운영</div>
+      </div>
+
+      <div class="crow">
+        <div class="rlabel">작업의 목적</div>
+        <div class="rcells">
+          <div class="c-old">검색 결과에 후기 글 노출</div>
+          <div class="c-new"><b>검색 후 예약까지</b> 이어지는 흐름 정비</div>
+        </div>
+      </div>
+
+      <div class="crow">
+        <div class="rlabel">다루는 채널</div>
+        <div class="rcells">
+          <div class="c-old">주로 블로그 / 일부 플레이스</div>
+          <div class="c-new">플레이스 · 블로그 · <b>구글 · 인스타</b> 통합</div>
+        </div>
+      </div>
+
+      <div class="crow">
+        <div class="rlabel">고객 시선</div>
+        <div class="rcells">
+          <div class="c-old">글이 보이긴 함</div>
+          <div class="c-new">소개글·사진·가격·예약 메뉴까지 <b>일관되게 정리</b></div>
+        </div>
+      </div>
+
+      <div class="crow">
+        <div class="rlabel">예약 전환</div>
+        <div class="rcells">
+          <div class="c-old">개별 후기에 의존</div>
+          <div class="c-new">예약 메뉴 · 동선 · 리뷰 유도까지 <b>설계</b></div>
+        </div>
+      </div>
+
+      <div class="crow">
+        <div class="rlabel">재방문</div>
+        <div class="rcells">
+          <div class="c-old">관리 항목 아님</div>
+          <div class="c-new">회원가 · 이벤트 안내 <b>구조화</b></div>
+        </div>
+      </div>
+
+      <div class="crow">
+        <div class="rlabel">결과 확인</div>
+        <div class="rcells">
+          <div class="c-old">노출 캡처 위주</div>
+          <div class="c-new">분기 리포트 + <b>다음 단계 제안</b></div>
+        </div>
+      </div>
+    </div>
+
+    <p class="note">※ 기존에 체험단 · 플레이스 정비로 연간 약 500만 원 수준을 운영 중이셨다면,
+    Weplace 제안은 “블로그를 더 쓰는 비용”이 아니라
+    <b style="color:var(--green-deep)">검색 후 예약까지 이어지는 구조를 만드는 비용</b>으로 보시는 것이 정확합니다.</p>
+  </section>
+
+  <!-- REFERENCE -->
+  <section class="ref reveal">
+    <span class="eyebrow">레퍼런스</span>
+    <h2>경쟁이 강한 검색 환경에서도<br>검색면을 함께 정비한 사례</h2>
+    <p class="lead">명동은 마사지 검색 경쟁이 매우 치열한 상권입니다.
+    그런 환경에서도 채널을 함께 정비했을 때의 사례를 공유드립니다.</p>
+
+    <div class="ref-card">
+      <div class="rname">난다아로마 (명동)</div>
+      <div class="rtag">15년 이상 운영 · 명동 마사지 상권</div>
+      <p>네이버 ‘명동 마사지’ 검색의 플레이스 영역, 블로그 후기, 구글 지도·후기까지
+      여러 채널을 함께 정비하며 검색면을 확보해 온 매장입니다.
+      구글 리뷰는 290여 건(평점 4.9)이 쌓여 있고, 검색 시 플레이스·블로그·구글이
+      함께 보이는 형태로 운영되고 있습니다.</p>
+      <div class="rgrid">
+        <span>네이버 플레이스</span>
+        <span>블로그 후기</span>
+        <span>구글 지도 · 후기</span>
+        <span>다국어 소개글</span>
+      </div>
+    </div>
+
+    <!-- VISIBLE SEARCH MOCKUP : NAVER -->
+    <div class="serp">
+      <div class="serp-cap">실제 검색 화면 재현 · 네이버 <span class="live">‘명동 마사지’</span> 검색 시</div>
+      <div class="nv">
+        <div class="nv-bar">
+          <span class="nv-logo">N</span>
+          <span class="nv-q">명동 마사지</span>
+          <span class="nv-mag">🔍</span>
+        </div>
+        <div class="nv-tabs"><b>플레이스</b><span>블로그</span><span>카페</span><span>이미지</span><span>지식iN</span></div>
+        <div class="nv-place">
+          <div class="npl-head">서울 중구 명동 · 플레이스</div>
+          <div class="nv-item">
+            <span class="ni-rank">·</span>
+            <div class="ni-body"><div class="ni-name">더하노이풋앤바디 시청프레지던트…</div><div class="ni-cat">발관리</div><div class="ni-meta">영업 중 · 예약</div></div>
+          </div>
+          <div class="nv-item hl">
+            <span class="ni-rank">·</span>
+            <div class="ni-body"><div class="ni-name">난다타이아로마마사지 명동점<span class="ni-you">참고 사례</span></div><div class="ni-cat">피부 · 체형관리</div><div class="ni-meta">영업 중 · 예약 · 후기 다수</div></div>
+          </div>
+          <div class="nv-item">
+            <span class="ni-rank">·</span>
+            <div class="ni-body"><div class="ni-name">명동뷰티</div><div class="ni-cat">피부 · 체형관리</div><div class="ni-meta">영업 중 · 쿠폰</div></div>
+          </div>
+        </div>
+      </div>
+      <!-- GOOGLE -->
+      <div class="gg">
+        <div class="gg-top">
+          <span class="gg-logo"><span class="b1">G</span><span class="b2">o</span><span class="b3">o</span><span class="b4">g</span><span class="b5">l</span><span class="b6">e</span></span>
+          <span>난다아로마</span>
+        </div>
+        <div class="gg-card">
+          <div class="gc-name">Nanda Aroma Thai Massage &amp; Facial Spa — Myeongdong</div>
+          <div class="gc-rate"><span class="stars">★★★★★</span><b>4.9</b><span>· 구글 리뷰 290여 개</span></div>
+          <div class="gc-sub">서울 중구 명동 · 타이 마사지숍 · 지도/후기 노출</div>
+        </div>
+      </div>
+      <div class="serp-cap" style="border-top:1px solid var(--line);border-bottom:none">※ 검색 화면을 이해를 돕기 위해 재구성한 참고 이미지입니다. 실제 화면·순위와 다를 수 있습니다.</div>
+    </div>
+
+    <div class="bridge">
+      구래동은 명동과 <span class="hl">상권이 다릅니다.</span>
+      관광 상권이 아니라 생활권 · 재방문 중심입니다.
+      <br><br>
+      하지만 <span class="hl">검색 후 신뢰를 만들고 예약으로 연결하는 구조는 동일합니다.</span>
+      명동에서 검증한 “채널을 함께 정비하는 방식”을, 구래동의 재방문 상권에 맞게 옮겨오는 작업입니다.
+    </div>
+
+    <p class="note">※ 위 사례는 검색 환경 정비의 방향을 설명하기 위한 참고 자료입니다.
+    검색 결과는 다양한 요인에 따라 달라지므로, 특정 순위나 노출 결과를 보장하지 않습니다.</p>
+  </section>
+
+  <!-- PLAN -->
+  <section class="plan reveal">
+    <span class="eyebrow">1년 운영 플랜</span>
+    <h2>한 번에 크게가 아니라,<br>분기별로 단계 적용합니다.</h2>
+    <p class="lead">기초부터 차근차근. <b class="accent">먼저 1·2분기 운영비만 정해 시작</b>하고,
+    3·4분기는 운영 범위를 함께 확정한 뒤 안내드리는 구조입니다.
+    부담 없이 시작해, 결과를 확인하며 확장합니다.</p>
+
+    <!-- Q1 -->
+    <div class="qcard">
+      <div class="qhead"><span class="qno">1분기</span><span class="qtitle">검색 신뢰 정비</span></div>
+      <p class="qgoal">검색했을 때 가장 먼저 보이는 면을 깔끔하게. “이 매장 믿을 만하다”는 첫인상부터 만듭니다.</p>
+      <ul class="qlist">
+        <li>네이버 플레이스 소개글 · 키워드 · 사진 · 예약 메뉴 정비</li>
+        <li>구글 비즈니스 프로필 기본 정비 (주소·전화·영업시간·사진)</li>
+        <li>블로그 콘텐츠 기초 운영</li>
+        <li>현재 검색면 점검 및 정비 우선순위 정리</li>
+      </ul>
+      <div class="qprice">
+        <span class="qp-lab">분기 운영비</span>
+        <span class="qp-val">220<small>만 원</small></span>
+      </div>
+    </div>
+
+    <!-- Q2 -->
+    <div class="qcard">
+      <div class="qhead"><span class="qno">2분기</span><span class="qtitle">키워드 확장</span></div>
+      <p class="qgoal">‘구래동 마사지’ 외에도 발관리·스포츠·아로마 등 고객이 실제로 검색하는 표현으로 닿는 면을 넓힙니다.</p>
+      <ul class="qlist">
+        <li>관리 종류별(발관리 · 스포츠 · 아로마) 키워드 콘텐츠 확장</li>
+        <li>블로그 콘텐츠 운영 지속</li>
+        <li>구글 게시글 및 Q&amp;A 세팅</li>
+        <li>인스타그램 프로필 · 하이라이트 · 피드 방향 정리</li>
+      </ul>
+      <div class="qprice">
+        <span class="qp-lab">분기 운영비</span>
+        <span class="qp-val">260<small>만 원</small></span>
+      </div>
+    </div>
+
+    <!-- Q3 -->
+    <div class="qcard locked">
+      <div class="qhead"><span class="qno">3분기</span><span class="qtitle">예약 전환 강화</span></div>
+      <p class="qgoal">검색해서 들어온 고객이 망설이지 않고 예약 버튼을 누르도록, 보는 동선과 결정 요소를 정리합니다.</p>
+      <ul class="qlist">
+        <li>가격표 · 이벤트 · 코스 안내 디자인 카드 제작</li>
+        <li>예약 메뉴 구성 · 안내 문구 정리</li>
+        <li>리뷰 QR 카드 및 현장 리뷰 요청 문구 제작</li>
+        <li>블로그 · 인스타 콘텐츠 운영 지속</li>
+      </ul>
+      <div class="qprice">
+        <span class="qp-lab">운영비</span>
+        <span class="qp-locked">확장 단계 · 1·2분기 운영 후 안내</span>
+      </div>
+    </div>
+
+    <!-- Q4 -->
+    <div class="qcard locked">
+      <div class="qhead"><span class="qno">4분기</span><span class="qtitle">재방문 · 회원가 구조 고도화</span></div>
+      <p class="qgoal">한 번 온 고객이 다시 오게. 회원가·이벤트를 자연스럽게 안내하는 재방문 흐름을 다듬습니다.</p>
+      <ul class="qlist">
+        <li>회원가 · 멤버십 · 이벤트 안내 구조 정리</li>
+        <li>재방문 유도 콘텐츠 및 안내 동선 설계</li>
+        <li>전 채널 운영 지속 (플레이스 · 블로그 · 구글 · 인스타)</li>
+        <li>1년 운영 결과 정리 및 다음 해 운영 제안</li>
+      </ul>
+      <div class="qprice">
+        <span class="qp-lab">운영비</span>
+        <span class="qp-locked">고도화 단계 · 운영 범위 확정 후 안내</span>
+      </div>
+    </div>
+
+    <div class="scale-hint">
+      분기마다 운영비가 달라지는 이유는 단순 인상이 아닙니다.
+      <b>1분기는 기초 정비, 4분기는 4개 채널 통합 운영 + 재방문 구조 설계</b>까지
+      범위 자체가 넓어지기 때문입니다. 그래서 3·4분기 운영비는
+      1·2분기 결과를 함께 확인한 뒤, 실제 운영 범위에 맞춰 안내드립니다.
+    </div>
+  </section>
+
+  <!-- INCLUDED -->
+  <section class="incl reveal">
+    <span class="eyebrow">1년 운영 포함 내역</span>
+    <h2>이 모든 작업이<br>한 흐름으로 묶입니다.</h2>
+
+    <div class="incl-grid">
+      <div class="incl-item"><div class="ic">N</div><div><div class="it">네이버 플레이스 정비</div><div class="id">소개글 · 키워드 · 사진 · 예약 메뉴 정리</div></div></div>
+      <div class="incl-item"><div class="ic">✎</div><div><div class="it">블로그 콘텐츠 운영</div><div class="id">관리 종류·후기 중심 콘텐츠 지속 운영</div></div></div>
+      <div class="incl-item"><div class="ic">G</div><div><div class="it">구글 비즈니스 프로필 정비</div><div class="id">주소·전화·영업시간·사진 등 기본 정보 정리</div></div></div>
+      <div class="incl-item"><div class="ic">Q</div><div><div class="it">구글 게시글 및 Q&amp;A 세팅</div><div class="id">자주 묻는 질문·안내 게시 구성</div></div></div>
+      <div class="incl-item"><div class="ic">◎</div><div><div class="it">인스타그램 방향 정리</div><div class="id">프로필 · 하이라이트 · 피드 톤 정리</div></div></div>
+      <div class="incl-item"><div class="ic">▦</div><div><div class="it">디자인 카드 제작</div><div class="id">가격표 · 이벤트 · 코스 안내 카드</div></div></div>
+      <div class="incl-item"><div class="ic">★</div><div><div class="it">리뷰 유도 장치</div><div class="id">리뷰 QR 카드 · 현장 리뷰 요청 문구</div></div></div>
+      <div class="incl-item"><div class="ic">▤</div><div><div class="it">월간 / 분기별 리포트</div><div class="id">운영 내역과 다음 단계 정리</div></div></div>
+      <div class="incl-item"><div class="ic">↻</div><div><div class="it">연간 결과 정리 · 다음 해 제안</div><div class="id">1년 운영 결과 정리 후 다음 방향 제안</div></div></div>
+    </div>
+  </section>
+
+  <!-- PAYMENT OPTIONS -->
+  <section class="annual reveal">
+    <span class="eyebrow">결제 방식</span>
+    <h2 style="font-size:22px;font-weight:800;margin-bottom:8px">결제는 두 가지 중<br>편하신 방식으로.</h2>
+    <p class="lead">한 번에 큰 금액이 나가지 않도록, 기본은 <b class="accent">분기 단위 결제</b>입니다.
+    1년 전체를 미리 함께하기로 결정하시면 리워드 혜택을 드립니다.</p>
+
+    <div class="pay-grid">
+      <div class="pay-opt">
+        <div class="po-top">
+          <span class="po-name">분기 단위 결제</span>
+          <span class="po-badge">기본</span>
+        </div>
+        <p class="po-desc">분기마다 결제하고, 운영 결과를 확인한 뒤 다음 단계를 함께 결정합니다.
+        1·2분기 운영비(<b>220 · 260만 원</b>)부터 시작하고, 3·4분기는 범위 확정 후 안내드립니다.</p>
+      </div>
+
+      <div class="pay-opt reward">
+        <div class="po-top">
+          <span class="po-name">1년 통결제</span>
+          <span class="po-badge">리워드</span>
+        </div>
+        <div class="reward-big">연간 총 운영비에서 <span class="pct">10%</span> 리워드</div>
+        <p class="po-desc">1년 운영을 미리 함께하기로 결정하시면,
+        <b>연간 총액의 10%를 리워드(할인)로 돌려드립니다.</b>
+        통결제 시 연간 총 운영비는 상담 단계에서 정확히 안내드립니다.</p>
+      </div>
+    </div>
+
+    <p class="pay-note">※ 모든 금액은 VAT 별도이며, 3·4분기 운영비와 연간 총 운영비는
+    실제 운영 범위 확정 후 상담 단계에서 공개해 드립니다. 부담스럽지 않게,
+    1분기부터 단계적으로 진행하실 수 있습니다.</p>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <h2>먼저 1분기,<br>검색 신뢰 정비부터<br>가볍게 시작해보시죠.</h2>
+    <p>전체를 한 번에 결정하지 않으셔도 됩니다.
+    1분기 정비 후 검색면이 어떻게 정리되는지 확인하고,
+    다음 단계는 그때 함께 논의하면 됩니다.</p>
+    <div class="btns">
+      <a class="btn btn-primary" href="#">1분기 정비 플랜부터 시작하기</a>
+      <a class="btn btn-ghost" href="#">분기별 운영안 상담하기</a>
+    </div>
+    <div class="contact">
+      Weplace · 검색 신뢰 강화 &amp; 예약 전환 운영<br>
+      담당 / 연락처 — [ placeholder ]
+    </div>
+  </section>
+
+  <footer>
+    © Weplace. 본 제안서는 더풋샵 김포한강구래점 대표님을 위해 작성되었습니다.<br>
+    검색 결과는 여러 요인에 따라 달라질 수 있으며, 특정 순위·매출 결과를 보장하지 않습니다.
+  </footer>
+
+</div>
+
+<script>
+  const els=document.querySelectorAll('.reveal');
+  const io=new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
+  },{threshold:.12});
+  els.forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
