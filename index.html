@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>더풋샵 김포한강구래점 · 검색 신뢰 강화 &amp; 예약 전환 운영 플랜 | Weplace</title>
-<meta name="description" content="블로그를 더 쓰는 게 아니라, 검색 후 예약까지 이어지는 구조를 만드는 1년 운영 제안. 네이버 플레이스·블로그·구글·인스타그램을 함께 정비합니다. 1분기부터 단계적으로.">
+<meta name="description" content="매장 공식 안내 페이지(홈페이지) 구축 + 네이버·구글·AI 검색 신뢰 강화 + 예약 전환 1년 운영 제안. 검색은 물론 AI가 매장을 이름과 함께 설명할 근거를 만듭니다. 홈페이지 구축과 1분기부터 단계적으로.">
 
 <!-- Canonical / base domain -->
 <link rel="canonical" href="https://thefootshop.netlify.app/">
@@ -12,8 +12,8 @@
 <!-- Open Graph (KakaoTalk / Facebook 공유 카드) -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://thefootshop.netlify.app/">
-<meta property="og:title" content="더풋샵 김포한강구래점 · 검색 신뢰 강화 & 예약 전환 운영 플랜">
-<meta property="og:description" content="검색하고, 안심하고, 예약까지 — 1년 운영 제안. 1분기 220만 원부터 단계적으로 시작합니다.">
+<meta property="og:title" content="더풋샵 김포한강구래점 · 공식 안내 페이지 + 검색·예약 1년 운영 제안">
+<meta property="og:description" content="매장 안내 홈페이지를 만들고, 네이버·구글·AI 검색까지 1년 정비. 검색하고, 안심하고, 예약까지.">
 <meta property="og:image" content="https://thefootshop.netlify.app/og-image.png">
 <meta property="og:image:secure_url" content="https://thefootshop.netlify.app/og-image.png">
 <meta property="og:image:type" content="image/png">
@@ -221,6 +221,20 @@
   .qp-locked{font-size:13px;font-weight:700;color:var(--ink-faint);background:var(--cream);border:1px dashed var(--line);padding:7px 12px;border-radius:9px;line-height:1.4;text-align:right}
   .qcard.locked::before{background:var(--line)}
   .qcard.locked .qno{background:#F0EBE0;color:var(--ink-faint)}
+  /* Q1 dual price (구축 + 관리) */
+  .qcard.launch::before{background:var(--gold)}
+  .qcard.launch .qno{background:#FBEEDF;color:var(--gold)}
+  .qprice.dual{display:block;border-top:1px dashed var(--line);padding-top:14px}
+  .qp-line{display:flex;justify-content:space-between;align-items:baseline;padding:5px 0}
+  .qp-line .l{font-size:12.5px;color:var(--ink-soft);font-weight:600}
+  .qp-line .l b{color:var(--ink);font-weight:800}
+  .qp-line .v{font-size:18px;font-weight:800;color:var(--ink)}
+  .qp-line .v small{font-size:12px;color:var(--ink-faint);font-weight:700}
+  .qp-sum{margin-top:10px;background:var(--green-soft);border-radius:10px;padding:11px 13px;display:flex;justify-content:space-between;align-items:baseline}
+  .qp-sum .l{font-size:12px;font-weight:800;color:var(--green-deep)}
+  .qp-sum .v{font-size:20px;font-weight:800;color:var(--green-deep)}
+  .btag{font-size:10px;font-weight:800;color:#06281A;background:var(--green);padding:1px 7px;border-radius:6px;margin-right:6px;vertical-align:middle}
+  .ntag{font-size:10px;font-weight:800;color:var(--ink-soft);background:#EFE6D4;padding:1px 7px;border-radius:6px;margin-right:6px;vertical-align:middle}
 
   /* payment options */
   .pay-grid{display:flex;flex-direction:column;gap:12px;margin-top:22px}
@@ -327,6 +341,85 @@
   .eff-card .en .ei{width:30px;height:30px;border-radius:9px;background:var(--green-soft);color:var(--green-deep);display:flex;align-items:center;justify-content:center;font-weight:800}
   .eff-card p{margin-top:10px;font-size:13.5px;color:var(--ink-soft);line-height:1.66}
   .eff-note{margin-top:16px;font-size:12px;color:var(--ink-faint);line-height:1.6}
+
+  /* ===== AI SEARCH SECTION ===== */
+  .ai{background:#1C1A16;color:#EFE7DA;border-top:1px solid #11100D}
+  .ai .eyebrow{background:rgba(3,199,90,.16);color:var(--green)}
+  .ai h2{font-size:25px;font-weight:800;color:#FFFDF8;line-height:1.36;margin-bottom:12px}
+  .ai .lead{color:#B9B2A2}
+  .ai-stats{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:24px}
+  .ai-stat{background:#26231D;border:1px solid #34302A;border-radius:16px;padding:20px 16px}
+  .ai-stat .asn{font-size:30px;font-weight:800;color:var(--green);line-height:1}
+  .ai-stat .asl{margin-top:8px;font-size:13px;font-weight:700;color:#EFE7DA}
+  .ai-stat .asd{margin-top:6px;font-size:11.5px;color:#9A9384;line-height:1.5}
+  .ai-src{margin-top:12px;font-size:10.5px;color:#7C766B;line-height:1.5}
+  .chat{margin-top:24px;background:#0F0E0B;border:1px solid #2C2922;border-radius:18px;padding:18px}
+  .chat-h{font-size:11px;color:#8C867A;font-weight:700;letter-spacing:.04em;margin-bottom:14px;display:flex;align-items:center;gap:7px}
+  .chat-h .gpt{width:18px;height:18px;border-radius:50%;background:var(--green);display:flex;align-items:center;justify-content:center;color:#06281A;font-size:11px;font-weight:900}
+  .bub{padding:13px 15px;border-radius:14px;font-size:13.5px;line-height:1.6;margin-bottom:10px;max-width:92%}
+  .bub.user{background:#2C2922;color:#EFE7DA;margin-left:auto;border-bottom-right-radius:4px}
+  .bub.ai{background:#1A2A20;color:#D6E8DC;border:1px solid #234231;border-bottom-left-radius:4px}
+  .bub.ai b{color:var(--green)}
+  .ai-prompt{margin-top:20px;background:#26231D;border:1px dashed #3A362F;border-radius:14px;padding:18px}
+  .ai-prompt .apt{font-size:12px;font-weight:800;color:var(--green);margin-bottom:8px}
+  .ai-prompt .apq{font-size:13.5px;color:#E4DCCD;line-height:1.6;background:#16150F;border-radius:10px;padding:12px;font-style:italic}
+  .ai-punch{margin-top:22px;font-size:16px;font-weight:700;color:#FFFDF8;line-height:1.6}
+  .ai-punch .em{color:var(--green)}
+
+  /* ===== HOMEPAGE BUILD ===== */
+  .home{background:var(--white);border-top:1px solid var(--line)}
+  .home .eyebrow{background:var(--green-soft);color:var(--green-deep)}
+  .home h2{font-size:24px;font-weight:800;margin-bottom:12px}
+  .home-vis{margin-top:22px;background:linear-gradient(180deg,#FBF7EF,#F4EDE0);border:1px solid var(--line);border-radius:18px;padding:22px}
+  .phone{margin:0 auto;max-width:230px;background:#fff;border:1px solid var(--line);border-radius:22px;padding:14px 12px;box-shadow:var(--shadow)}
+  .phone .pnav{height:6px;width:46px;background:#E6DDCB;border-radius:6px;margin:0 auto 12px}
+  .phone .pblk{border-radius:9px;margin-bottom:8px}
+  .phone .p-hero{height:54px;background:linear-gradient(120deg,#11261B,#1D6F44);display:flex;align-items:center;justify-content:center;color:#EAF6EE;font-size:11px;font-weight:800}
+  .phone .p-row{height:13px;background:#EFE6D4}
+  .phone .p-row.s{width:60%}
+  .phone .p-menu{display:flex;gap:6px;margin:8px 0}
+  .phone .p-menu div{flex:1;height:30px;background:#E7F7EE;border-radius:7px}
+  .phone .p-cta{height:30px;background:var(--green);border-radius:8px;display:flex;align-items:center;justify-content:center;color:#06281A;font-size:11px;font-weight:800}
+  .home-feat{margin-top:22px;display:flex;flex-direction:column;gap:10px}
+  .hf{display:flex;gap:13px;align-items:flex-start;background:var(--cream);border:1px solid var(--line);border-radius:13px;padding:15px 15px}
+  .hf .hfi{flex:none;width:30px;height:30px;border-radius:9px;background:var(--green-soft);color:var(--green-deep);font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center}
+  .hf .hft{font-size:14px;font-weight:700;color:var(--ink)}
+  .hf .hfd{font-size:12.5px;color:var(--ink-soft);margin-top:3px;line-height:1.55}
+  .proof-band{margin-top:20px;background:#11261B;color:#EAF6EE;border-radius:16px;padding:22px;font-size:14.5px;line-height:1.74;font-weight:600}
+  .proof-band .ptag{display:inline-block;font-size:11px;font-weight:800;letter-spacing:.04em;color:var(--green);background:rgba(3,199,90,.14);padding:4px 10px;border-radius:7px;margin-bottom:12px}
+  .proof-band .em{color:var(--green)}
+
+  /* ===== BUILD PRICE ===== */
+  .build-grid{display:flex;flex-direction:column;gap:12px;margin-top:22px}
+  .build-opt{border-radius:16px;padding:20px;border:1px solid var(--line);background:var(--white)}
+  .build-opt.recommend{border-color:var(--green);box-shadow:0 0 0 3px rgba(3,199,90,.12)}
+  .build-opt .bo-top{display:flex;align-items:center;justify-content:space-between;gap:10px}
+  .build-opt .bo-name{font-size:15px;font-weight:800;color:var(--ink)}
+  .build-opt .bo-badge{font-size:10.5px;font-weight:800;padding:4px 9px;border-radius:7px;background:var(--green);color:#06281A}
+  .build-opt .bo-price{margin-top:12px;font-size:24px;font-weight:800;color:var(--ink)}
+  .build-opt .bo-price small{font-size:14px;color:var(--ink-faint);font-weight:700}
+  .build-opt .bo-desc{margin-top:8px;font-size:12.5px;color:var(--ink-soft);line-height:1.6}
+  .build-opt .bo-list{margin-top:12px;list-style:none;display:flex;flex-direction:column;gap:6px}
+  .build-opt .bo-list li{font-size:12.5px;color:var(--ink);padding-left:18px;position:relative;line-height:1.5}
+  .build-opt .bo-list li::before{content:"✓";position:absolute;left:0;top:0;color:var(--green-deep);font-weight:800;font-size:11px}
+  .stack-row{margin-top:14px;display:flex;align-items:center;gap:10px;background:var(--cream);border:1px solid var(--line);border-radius:13px;padding:14px 16px}
+  .stack-row .sr-n{flex:none;width:26px;height:26px;border-radius:8px;background:var(--green-soft);color:var(--green-deep);font-weight:800;font-size:13px;display:flex;align-items:center;justify-content:center}
+  .stack-row .sr-t{font-size:13px;color:var(--ink);line-height:1.5}
+  .stack-row .sr-t b{color:var(--ink);font-weight:800}
+  .stack-row .sr-v{margin-left:auto;font-size:14px;font-weight:800;color:var(--ink);white-space:nowrap}
+  .stack-row .sr-v.soft{font-size:11.5px;font-weight:700;color:var(--ink-faint)}
+
+  /* ===== FAQ ===== */
+  .faq{background:var(--white);border-top:1px solid var(--line)}
+  .faq h2{font-size:23px;font-weight:800;margin-bottom:8px}
+  .faq-list{margin-top:20px;display:flex;flex-direction:column;gap:10px}
+  details.fq{background:var(--cream);border:1px solid var(--line);border-radius:13px;overflow:hidden}
+  details.fq summary{list-style:none;cursor:pointer;padding:16px 18px;font-size:14px;font-weight:700;color:var(--ink);display:flex;align-items:center;gap:10px}
+  details.fq summary::-webkit-details-marker{display:none}
+  details.fq summary .q{flex:none;color:var(--green-deep);font-weight:800}
+  details.fq summary .arw{margin-left:auto;color:var(--ink-faint);transition:transform .2s}
+  details.fq[open] summary .arw{transform:rotate(180deg)}
+  details.fq .fa{padding:0 18px 18px;font-size:13px;color:var(--ink-soft);line-height:1.72}
 </style>
 </head>
 <body>
@@ -339,15 +432,15 @@
       <span class="name">WEPLACE</span>
       <span class="for">제안 대상 · 더풋샵 김포한강구래점 대표님</span>
     </div>
-    <div class="kicker">검색 신뢰 강화 &amp; 예약 전환 운영 플랜</div>
+    <div class="kicker">매장 공식 안내 페이지 + 검색 신뢰 강화 &amp; 예약 전환 운영</div>
     <h1>고객이 검색하고,<br>안심하고 <b>예약하기까지.</b><br>그 흐름 전체를 정비합니다.</h1>
-    <p class="sub">블로그 글 몇 개를 더 남기는 작업이 아닙니다.
-    네이버 플레이스 · 블로그 · 구글 · 인스타그램을 하나로 정리해,
-    구래동 고객이 검색 후 망설임 없이 예약하게 만드는 운영 구조 제안입니다.</p>
+    <p class="sub"> 네이버·인스타 위에 <b style="color:#fff">매장 공식 안내 페이지(홈페이지)</b>라는
+    안내 페이지를 만들고, 네이버·블로그·구글·AI 검색까지 1년 동안 함께 정비합니다.
+    검색은 물론 AI가 매장을 ‘이름과 함께’ 설명할 근거를 만드는 작업입니다.</p>
     <div class="meta">
-      <span>1년 · 분기별 단계 운영</span>
+      <span>홈페이지 구축 + 1년 운영</span>
+      <span>네이버 · 구글 · AI 검색</span>
       <span>발관리 · 스포츠 · 아로마</span>
-      <span>생활권 재방문 상권</span>
     </div>
   </header>
 
@@ -475,7 +568,7 @@
         <div class="rlabel">작업 방식</div>
         <div class="rcells">
           <div class="c-old">체험단 방문 후 후기 작성</div>
-          <div class="c-new">정보 구조 · 사진 · 예약 메뉴 · 키워드 · <b>리뷰 루프</b>까지 정비</div>
+          <div class="c-new">정보 구조 · 사진 · 예약 메뉴 · 키워드 · <b>후기가 다시 쌓이는 흐름</b>까지 정비</div>
         </div>
       </div>
 
@@ -488,7 +581,7 @@
       </div>
 
       <div class="crow">
-        <div class="rlabel">자산성</div>
+        <div class="rlabel">쌓이는 것</div>
         <div class="rcells">
           <div class="c-old">글 단위로 흩어짐</div>
           <div class="c-new">플레이스 · GBP · 인스타 · 리뷰 · 디자인 <b>자산으로 축적</b></div>
@@ -509,10 +602,97 @@
     <b style="color:var(--green-deep)">검색 후 예약까지 이어지는 구조를 만드는 비용</b>으로 보시는 것이 정확합니다.</p>
   </section>
 
+  <!-- AI SEARCH -->
+  <section class="ai reveal">
+    <span class="eyebrow">검색 습관의 변화</span>
+    <h2>고객은 이미 AI에게<br>매장을 다시 묻기 시작했습니다.</h2>
+    <p class="lead">AI 검색은 더 이상 일부 얼리어답터만의 습관이 아닙니다.
+    고객이 장소를 비교할 때 함께 쓰는 확인 도구로 옮겨가고 있습니다.</p>
+
+    <div class="ai-stats">
+      <div class="ai-stat">
+        <div class="asn">54.5%</div>
+        <div class="asl">ChatGPT 이용률 과반</div>
+        <div class="asd">검색이 네이버 하나에만 머무르지 않는다는 신호.</div>
+      </div>
+      <div class="ai-stat">
+        <div class="asn">36.4%</div>
+        <div class="asl">신생기업 5년 생존율</div>
+        <div class="asd">고객의 비교 화면에서 먼저 신뢰를 얻는 시장으로 변화.</div>
+      </div>
+    </div>
+    <p class="ai-src">※ 자료: OpenSurvey AI Search Trend Report 2026, 통계청 2024년 기업생멸행정통계. 수치는 시장 변화를 이해하기 위한 참고 지표입니다.</p>
+
+    <div class="chat">
+      <div class="chat-h"><span class="gpt">G</span>고객이 AI에게 묻는 방식 · 예시</div>
+      <div class="bub user">구래동에서 발 마사지 잘하는 곳 추천해줘. 퇴근하고 들르려는데 회원가 있는 동네 단골집으로.</div>
+      <div class="bub ai">구래역 인근에서 발 관리 위주로 보면 다음을 고려해볼 만합니다:<br>· <b>매장 A</b> — 발관리·아로마 코스, 회원가 운영, 구래역 도보권<br>· 매장 B — 예약 가능, 1인 관리 안내 명시<br>각 매장의 코스 시간·가격·예약 방법을 함께 확인해보세요.</div>
+      <p class="chat-note">※ 실제 ChatGPT/Perplexity의 검색 패턴을 단순화한 예시입니다.</p>
+    </div>
+
+    <div class="ai-prompt">
+      <div class="apt">직접 확인해보기 · 1분</div>
+      <div class="apq">“구래동(또는 김포)에서 발 마사지 / 아로마 잘하는 곳 추천해줘. 처음 가는 거라 부담 없는 곳으로.”</div>
+      <p style="margin-top:10px;font-size:12px;color:#9A9384;line-height:1.6">위 문장을 ChatGPT에 그대로 물어보시면, 지금 우리 매장이 AI 답변에 이름과 함께 들어가는지 직접 확인하실 수 있습니다.</p>
+    </div>
+
+    <p class="ai-punch">
+      AI가 어떤 매장을 <span class="em">“이름과 함께”</span> 답에 포함시키느냐는,
+      그 매장 정보가 검색엔진과 AI에 정리되어 있는지에 달려 있습니다.
+      지금 필요한 건 광고를 하나 더 켜는 일이 아니라,
+      <span class="em">네이버·인스타 밖에서도 같은 매장으로 설명되게</span> 만드는 일입니다.
+    </p>
+  </section>
+
+  <!-- HOMEPAGE BUILD -->
+  <section class="home reveal">
+    <span class="eyebrow">매장 공식 안내 페이지 (홈페이지)</span>
+    <h2>네이버·인스타 밖에서도<br>매장을 설명해주는 페이지 하나.</h2>
+    <p class="lead">대표님이 손님께 매번 설명하시던 내용을, 고객이 예약 전에 스스로 확인하게 정리한
+    <b class="accent">모바일 1페이지 안내 홈페이지</b>입니다. 메뉴·가격·예약·위치를 한 화면에 모아,
+    구글과 AI 검색이 매장을 정확히 이해하도록 돕습니다.</p>
+
+    <div class="home-vis">
+      <div class="phone">
+        <div class="pnav"></div>
+        <div class="pblk p-hero">더풋샵 김포한강구래점</div>
+        <div class="pblk p-row"></div>
+        <div class="pblk p-row s"></div>
+        <div class="p-menu"><div></div><div></div><div></div></div>
+        <div class="pblk p-row"></div>
+        <div class="pblk p-row s"></div>
+        <div class="pblk p-cta">네이버 예약하기</div>
+      </div>
+    </div>
+
+    <div class="home-feat">
+      <div class="hf"><div class="hfi">▤</div><div><div class="hft">모바일 1페이지 제작</div><div class="hfd">매장 소개 · 시술 메뉴 · 이용 안내 · 예약 버튼을 한 화면에 구성</div></div></div>
+      <div class="hf"><div class="hfi">₩</div><div><div class="hft">시술 메뉴 · 시간 · 가격 정리</div><div class="hfd">발관리·스포츠·아로마 코스, 회원가까지 고객이 반복 확인하는 정보를 정돈</div></div></div>
+      <div class="hf"><div class="hfi">?</div><div><div class="hft">자주 묻는 질문 · 예약 흐름 정리</div><div class="hfd">1인 관리 · 환불 · 주차 · 네이버 예약 · 카카오톡 채널 연결</div></div></div>
+      <div class="hf"><div class="hfi">◎</div><div><div class="hft">구글·AI가 매장을 이해하도록 정리</div><div class="hfd">지역 키워드 · 사진 설명 · 검색이 매장을 읽어가는 정보 정돈</div></div></div>
+    </div>
+
+    <div class="ack-say" style="margin-top:20px">
+      홈페이지는 <b>매장 오픈처럼 처음 한 번만 만들면 되는 자산</b>입니다.
+      분기마다 새로 만드는 게 아니라, 한 번 만든 페이지를 시즌·가격·이벤트가 바뀔 때
+      방치되지 않게 <b>관리만 이어가는</b> 구조입니다.
+    </div>
+
+    <div class="proof-band">
+      <span class="ptag">비공개 적용 사례 · 강남권 오프라인 예약형 매장</span><br>
+      홈페이지 하나만 만든 것이 아니라, <span class="em">AI가 참고할 수 있는 근거</span>를 함께 쌓은 사례입니다.
+      홈페이지·네이버·구글 비즈니스 프로필·짧은 콘텐츠가 서로 다른 말을 하지 않도록 같은 방향으로 정리했습니다.
+      <br><br>
+      <span class="em">노출을 보장한다고 말하지 않겠습니다.</span> 다만 노출될 근거가 없는 상태로는
+      고객의 비교 화면에 들어가기 어렵습니다. 저희가 만드는 건 ‘노출 보장’이 아니라 ‘노출될 수 있는 근거’입니다.
+    </div>
+    <p class="note">※ AI 검색 결과는 시점·질문 문장·사용자 환경에 따라 달라지므로 특정 순위나 노출을 보장하지 않습니다. 매장 상호명은 협의에 따라 비공개로 운영합니다.</p>
+  </section>
+
   <!-- REFERENCE -->
   <section class="ref reveal">
     <span class="eyebrow">레퍼런스</span>
-    <h2>경쟁이 강한 검색 환경에서도<br>검색면을 함께 정비한 사례</h2>
+    <h2>경쟁이 강한 검색 환경에서도<br>검색 화면을 함께 정비한 사례</h2>
     <p class="lead">명동은 마사지 검색 경쟁이 매우 치열한 상권입니다.
     그런 환경에서도 채널을 함께 정비했을 때의 사례를 공유드립니다.</p>
 
@@ -520,7 +700,7 @@
       <div class="rname">난다아로마 (명동)</div>
       <div class="rtag">15년 이상 운영 · 명동 마사지 상권</div>
       <p>네이버 ‘명동 마사지’ 검색의 플레이스 영역, 블로그 후기, 구글 지도·후기까지
-      여러 채널을 함께 정비하며 검색면을 확보해 온 매장입니다.
+      여러 채널을 함께 정비하며 검색 화면에서의 자리를 확보해 온 매장입니다.
       구글 리뷰는 290여 건(평점 4.9)이 쌓여 있고, 검색 시 플레이스·블로그·구글이
       함께 보이는 형태로 운영되고 있습니다.</p>
       <div class="rgrid">
@@ -592,26 +772,29 @@
   <section class="plan reveal">
     <span class="eyebrow">1년 운영 플랜</span>
     <h2>한 번에 크게가 아니라,<br>분기별로 단계 적용합니다.</h2>
-    <p class="lead">기초부터 차근차근. <b class="accent">먼저 1·2분기 운영비만 정해 시작</b>하고,
-    3·4분기는 운영 범위를 함께 확정한 뒤 안내드리는 구조입니다.
-    부담 없이 시작해, 결과를 확인하며 확장합니다.</p>
+    <p class="lead"><b class="accent">1분기에 홈페이지를 구축</b>하고, 그 위에서 검색 신뢰 정비를 함께 시작합니다.
+    이후 <b class="accent">관리·운영비는 분기마다 부과</b>되며, 2분기 운영비까지 정해 시작하고
+    3·4분기는 결과를 함께 확인한 뒤 안내드립니다.</p>
 
     <!-- Q1 -->
-    <div class="qcard">
-      <div class="qhead"><span class="qno">1분기</span><span class="qtitle">검색 신뢰 정비</span></div>
-      <p class="qgoal">1분기는 새롭게 무언가를 크게 벌리는 단계가 아니라,
-      이미 쌓여 있는 리뷰·사진·예약 메뉴·인스타그램·구글 정보를 <b style="color:var(--green-deep)">고객이 보기 좋게 정리하는 단계</b>입니다.</p>
+    <div class="qcard launch">
+      <div class="qhead"><span class="qno">1분기</span><span class="qtitle">착수 · 구축 + 검색 신뢰 정비</span></div>
+      <p class="qgoal">1분기는 <b style="color:var(--green-deep)">매장 공식 안내 페이지(홈페이지)를 만들면서</b>,
+      이미 쌓여 있는 리뷰·사진·예약 메뉴·인스타·구글 정보를 그 안내 페이지에 맞춰 같은 방향으로 정리하는 단계입니다.
+      홈페이지가 혼자 떠 있지 않도록, 검색 화면 정비를 함께 진행합니다.</p>
       <ul class="qlist">
-        <li>네이버 플레이스 소개글 리라이팅 · 대표 키워드 재정리</li>
-        <li>예약 메뉴명·설명 정비, 사진 노출 순서 재구성</li>
-        <li>가격표 · 코스 안내 카드 디자인</li>
-        <li>인스타 프로필 · 하이라이트 정리</li>
-        <li>구글 비즈니스 기본 정보 + 영문 소개글 등록</li>
-        <li>리뷰 응대 템플릿 · 블로그 키워드맵 설계</li>
+        <li><span class="btag">구축</span>매장 공식 안내 페이지(홈페이지) 제작 · 검색엔진/AI 이해 구조 세팅</li>
+        <li><span class="ntag">정비</span>네이버 플레이스 소개글 리라이팅 · 대표 키워드 재정리</li>
+        <li><span class="ntag">정비</span>예약 메뉴명·설명 정비, 사진 노출 순서 재구성</li>
+        <li><span class="ntag">정비</span>가격표 · 코스 안내 카드 디자인</li>
+        <li><span class="ntag">정비</span>인스타 프로필 · 하이라이트 정리</li>
+        <li><span class="ntag">정비</span>구글 비즈니스 기본 정보 + 영문 소개글 등록</li>
+        <li><span class="ntag">정비</span>리뷰 응대 문구 · 블로그 키워드 정리</li>
       </ul>
-      <div class="qprice">
-        <span class="qp-lab">분기 운영비</span>
-        <span class="qp-val">220<small>만 원</small></span>
+      <div class="qprice dual">
+        <div class="qp-line"><span class="l"><b>홈페이지 구축</b> · 처음 한 번만</span><span class="v">150<small>만 원</small></span></div>
+        <div class="qp-line"><span class="l">1분기 관리·운영비</span><span class="v">220<small>만 원</small></span></div>
+        <div class="qp-sum"><span class="l">1분기 착수 합계</span><span class="v">370<small style="font-size:12px;font-weight:700">만 원</small></span></div>
       </div>
     </div>
 
@@ -631,7 +814,7 @@
         <li>인스타 카드뉴스 월 4~6건 · 키워드별 반응 체크</li>
       </ul>
       <div class="qprice">
-        <span class="qp-lab">분기 운영비</span>
+        <span class="qp-lab">분기 관리·운영비</span>
         <span class="qp-val">260<small>만 원</small></span>
       </div>
     </div>
@@ -639,7 +822,7 @@
     <!-- Q3 -->
     <div class="qcard locked">
       <div class="qhead"><span class="qno">3분기</span><span class="qtitle">예약 전환 강화</span></div>
-      <p class="qgoal">3분기부터는 단순 노출보다 예약 전환과 리뷰 루프를 강화합니다.
+      <p class="qgoal">3분기부터는 단순 노출보다 예약 전환과 후기가 다시 쌓이는 흐름을 강화합니다.
       <b style="color:var(--green-deep)">방문한 고객이 다시 검색 자산이 되도록</b> 만드는 단계입니다.</p>
       <ul class="qlist">
         <li>리뷰 QR 카드 · 카운터 리뷰 요청 스크립트 제작</li>
@@ -673,10 +856,10 @@
     </div>
 
     <div class="scale-hint">
-      분기마다 운영비가 달라지는 이유는 단순 인상이 아닙니다.
-      <b>1분기는 기초 정비, 4분기는 4개 채널 통합 운영 + 재방문 구조 설계</b>까지
-      범위 자체가 넓어지기 때문입니다. 그래서 3·4분기 운영비는
-      1·2분기 결과를 함께 확인한 뒤, 실제 운영 범위에 맞춰 안내드립니다.
+      <b>홈페이지 구축은 1분기에 한 번</b>, 관리·운영비는 분기마다 부과됩니다.
+      관리비가 분기마다 달라지는 건 단순 인상이 아니라, 1분기는 정비·2분기는 키워드 확장,
+      이후 예약 전환·재방문 구조 설계까지 <b>운영 범위가 넓어지기 때문</b>입니다.
+      그래서 3·4분기 관리비는 1·2분기 결과를 확인한 뒤 실제 범위에 맞춰 안내드립니다.
     </div>
   </section>
 
@@ -686,6 +869,7 @@
     <h2>네이버부터 현장 리뷰까지,<br>한 흐름으로 묶입니다.</h2>
 
     <div class="incl-grid">
+      <div class="incl-item"><div class="ic">▤</div><div><div class="it">매장 공식 안내 페이지(홈페이지) 구축·점검</div><div class="id">모바일 1페이지 · 메뉴/가격/FAQ/예약 · 검색엔진용 코드</div></div></div>
       <div class="incl-item"><div class="ic">N</div><div><div class="it">네이버 플레이스 정비</div><div class="id">소개글 · 키워드 · 사진 · 예약 메뉴 정리</div></div></div>
       <div class="incl-item"><div class="ic">✎</div><div><div class="it">블로그 콘텐츠 운영</div><div class="id">관리 종류·후기 중심 콘텐츠 지속 운영</div></div></div>
       <div class="incl-item"><div class="ic">G</div><div><div class="it">구글 비즈니스 프로필 정비</div><div class="id">주소·전화·영업시간·사진 등 기본 정보 정리</div></div></div>
@@ -710,6 +894,7 @@
         <div>개별 외주 시 항목</div>
         <div class="vh2">월 기준(시장가)</div>
       </div>
+      <div class="vrow"><div class="vc1">매장 공식 안내 페이지(홈페이지) 제작</div><div class="vc2">100~250만 원(1회)</div></div>
       <div class="vrow"><div class="vc1">네이버 플레이스 정비 · 운영</div><div class="vc2">25~40만 원</div></div>
       <div class="vrow"><div class="vc1">블로그 · 후기 콘텐츠</div><div class="vc2">40~70만 원</div></div>
       <div class="vrow"><div class="vc1">구글 비즈니스 · 외국인 검색 세팅</div><div class="vc2">15~30만 원</div></div>
@@ -729,36 +914,94 @@
 
   <!-- PAYMENT OPTIONS -->
   <section class="annual reveal">
-    <span class="eyebrow">결제 방식</span>
-    <h2 style="font-size:22px;font-weight:800;margin-bottom:8px">결제는 두 가지 중<br>편하신 방식으로.</h2>
-    <p class="lead">한 번에 큰 금액이 나가지 않도록, 기본은 <b class="accent">분기 단위 결제</b>입니다.
-    1년 전체를 미리 함께하기로 결정하시면 리워드 혜택을 드립니다.</p>
+    <span class="eyebrow">가격 구조 · 구축 + 분기 관리</span>
+    <h2 style="font-size:23px;font-weight:800;margin-bottom:8px">홈페이지는 처음 한 번만,<br>관리비는 분기마다.</h2>
+    <p class="lead">홈페이지는 <b class="accent">매장 오픈처럼 처음 한 번만 만드는 자산</b>입니다. 분기마다 새로 만드는 게 아닙니다.
+    1분기에 홈페이지를 만들면서 검색 화면을 함께 정비하고, 이후
+    <b class="accent">관리·운영비는 분기마다 부과</b>됩니다. 만드는 돈과 관리하는 돈을 분리한 구조입니다.</p>
 
-    <div class="pay-grid">
-      <div class="pay-opt">
-        <div class="po-top">
-          <span class="po-name">분기 단위 결제</span>
-          <span class="po-badge">기본</span>
+    <!-- 홈페이지 구축비 -->
+    <div style="margin-top:24px">
+      <div class="gtitle" style="font-size:13px;color:var(--ink-faint);font-weight:800;letter-spacing:.04em;margin-bottom:12px">홈페이지 구축비 · 처음 한 번만 (매장당 1회)</div>
+      <div class="build-grid">
+        <div class="build-opt recommend">
+          <div class="bo-top"><span class="bo-name">일시불 구축형</span><span class="bo-badge">기본 · 추천</span></div>
+          <div class="bo-price">150<small>만 원 · 처음 한 번만</small></div>
+          <div class="bo-desc">매장 공식 안내 페이지를 한 번에 구축하는 기준가입니다.</div>
+          <ul class="bo-list">
+            <li>모바일 1페이지 구축</li>
+            <li>시술 메뉴·시간·가격·1인 관리·FAQ 정리</li>
+            <li>네이버 예약·구글 지도 연결</li>
+            <li>오픈 후 30일 안정화 점검</li>
+          </ul>
         </div>
-        <p class="po-desc">분기마다 결제하고, 운영 결과를 확인한 뒤 다음 단계를 함께 결정합니다.
-        1·2분기 운영비(<b>220 · 260만 원</b>)부터 시작하고, 3·4분기는 범위 확정 후 안내드립니다.</p>
-      </div>
-
-      <div class="pay-opt reward">
-        <div class="po-top">
-          <span class="po-name">1년 통결제</span>
-          <span class="po-badge">리워드</span>
+        <div class="build-opt">
+          <div class="bo-top"><span class="bo-name">구독형 구축 (초기 부담↓)</span></div>
+          <div class="bo-price">70<small>만 원 + 월 11만 원</small></div>
+          <div class="bo-desc">초기 부담을 낮춰 시작하고, 12개월 동안 페이지가 방치되지 않게 함께 점검합니다. (할부가 아닌 1년 운영 구독형)</div>
+          <ul class="bo-list">
+            <li>홈페이지 구축 + 1년 점검 포함</li>
+            <li>시즌·비시즌 문구 업데이트</li>
+            <li>사진 설명·FAQ·예약 링크 점검</li>
+          </ul>
         </div>
-        <div class="reward-big">연간 총 운영비에서 <span class="pct">10%</span> 리워드</div>
-        <p class="po-desc">1년 운영을 미리 함께하기로 결정하시면,
-        <b>연간 총액의 10%를 리워드(할인)로 돌려드립니다.</b>
-        통결제 시 연간 총 운영비는 상담 단계에서 정확히 안내드립니다.</p>
       </div>
     </div>
 
-    <p class="pay-note">※ 모든 금액은 VAT 별도이며, 3·4분기 운영비와 연간 총 운영비는
-    실제 운영 범위 확정 후 상담 단계에서 공개해 드립니다. 부담스럽지 않게,
-    1분기부터 단계적으로 진행하실 수 있습니다.</p>
+    <!-- 분기 관리·운영비 -->
+    <div style="margin-top:26px">
+      <div class="gtitle" style="font-size:13px;color:var(--ink-faint);font-weight:800;letter-spacing:.04em;margin-bottom:12px">분기 관리·운영비 · 분기마다 부과</div>
+      <div class="stack-row"><span class="sr-n">1Q</span><span class="sr-t"><b>구축 + 검색 신뢰 정비</b></span><span class="sr-v">220만 원</span></div>
+      <div class="stack-row"><span class="sr-n">2Q</span><span class="sr-t"><b>키워드 확장</b></span><span class="sr-v">260만 원</span></div>
+      <div class="stack-row"><span class="sr-n">3Q</span><span class="sr-t"><b>예약 전환 강화</b></span><span class="sr-v soft">운영 후 안내</span></div>
+      <div class="stack-row"><span class="sr-n">4Q</span><span class="sr-t"><b>재방문·회원가 고도화</b></span><span class="sr-v soft">운영 후 안내</span></div>
+    </div>
+
+    <!-- 1분기 착수 합계 -->
+    <div class="qp-sum" style="margin-top:18px;padding:16px 18px">
+      <span class="l" style="font-size:13px">1분기 착수 합계 <span style="font-weight:600;color:var(--ink-soft)">(구축 150 + 관리 220)</span></span>
+      <span class="v" style="font-size:22px">370<small style="font-size:12px;font-weight:700">만 원</small></span>
+    </div>
+    <p class="note" style="margin-top:8px">※ 구독형 구축을 선택하시면 1분기는 <b>70만 원 + 관리 220만 원</b>으로 부담을 낮춰 시작할 수 있습니다.</p>
+
+    <!-- 결제 방식 -->
+    <div class="pay-grid" style="margin-top:24px">
+      <div class="pay-opt">
+        <div class="po-top"><span class="po-name">분기 단위 결제</span><span class="po-badge">기본</span></div>
+        <p class="po-desc">한 번에 큰 금액이 나가지 않습니다. 1분기 착수(구축 + 관리) 후, 2분기부터는 분기 관리비만 부과됩니다.</p>
+      </div>
+      <div class="pay-opt reward">
+        <div class="po-top"><span class="po-name">1년 통결제</span><span class="po-badge">리워드</span></div>
+        <div class="reward-big">연간 총 운영비에서 <span class="pct">10%</span> 리워드</div>
+        <p class="po-desc">1년 운영을 미리 함께하기로 결정하시면, <b>연간 총액의 10%를 리워드(할인)로 돌려드립니다.</b> 정확한 총액은 상담 단계에서 안내드립니다.</p>
+      </div>
+    </div>
+
+    <p class="pay-note">※ 모든 금액은 VAT 별도입니다. 3·4분기 관리비와 연간 총액은 실제 운영 범위 확정 후 상담 단계에서 안내드립니다. 부담스럽지 않게, 1분기 착수부터 단계적으로 진행하실 수 있습니다.</p>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq reveal">
+    <span class="eyebrow">자주 묻는 질문</span>
+    <h2>대표님이 궁금해하실<br>지점을 미리 정리했습니다.</h2>
+    <div class="faq-list">
+      <details class="fq">
+        <summary><span class="q">Q</span>일시불 구축형과 1년 운영 구독형의 차이는?<span class="arw">▾</span></summary>
+        <div class="fa">일시불 구축형은 매장 공식 안내 페이지를 한 번에 150만 원으로 구축하는 기준 방식입니다. 1년 운영 구독형은 초기 구축비 70만 원으로 시작해 월 11만 원으로 12개월 동안 시즌 정보·예약 링크·FAQ·사진 설명·구글/AI가 참고할 문장을 함께 점검하는 운영 구조입니다.</div>
+      </details>
+      <details class="fq">
+        <summary><span class="q">Q</span>70만 원 + 월 11만 원은 할부인가요?<span class="arw">▾</span></summary>
+        <div class="fa">할부가 아니라 1년 운영 구독형입니다. 70만 원은 페이지를 구축하는 초기 세팅 비용, 월 11만 원은 12개월 동안 홈페이지가 방치되지 않도록 함께 점검하는 운영 비용입니다. 홈페이지 값을 나눠 내는 게 아니라, 구축 이후에도 매장 정보가 계속 정리되도록 유지하는 구조입니다.</div>
+      </details>
+      <details class="fq">
+        <summary><span class="q">Q</span>AI·검색 노출을 보장하나요?<span class="arw">▾</span></summary>
+        <div class="fa">노출을 보장하지 않습니다. 다만 홈페이지·지도·리뷰·FAQ·콘텐츠가 같은 방향으로 정리되면, AI와 검색엔진이 참고할 수 있는 근거가 온라인에 남습니다. 노출될 근거가 없는 상태로는 고객의 비교 화면에 들어가기 어렵다는 점을 정직하게 안내드립니다.</div>
+      </details>
+      <details class="fq">
+        <summary><span class="q">Q</span>바로 결제부터 해야 하나요?<span class="arw">▾</span></summary>
+        <div class="fa">아닙니다. 매장명과 네이버 예약 링크를 보내주시면 현재 상태를 먼저 확인하고, 일시불 구축형과 1년 운영 구독형 중 어떤 방식이 맞는지 안내드립니다. 진행 여부는 그 다음에 결정하시면 됩니다.</div>
+      </details>
+    </div>
   </section>
 
   <!-- EXPECTED EFFECTS -->
@@ -776,7 +1019,7 @@
         <p>가격·코스·예약 메뉴·리뷰가 한 흐름으로 정리되어, 검색에서 예약 결정까지의 망설임을 줄입니다.</p>
       </div>
       <div class="eff-card">
-        <div class="en"><span class="ei">③</span>재방문 루프 형성</div>
+        <div class="en"><span class="ei">③</span>재방문이 이어지는 구조</div>
         <p>회원가·이벤트·재방문 콘텐츠로, 한 번 온 고객이 다시 검색 자산이 되는 구조를 만듭니다.</p>
       </div>
     </div>
@@ -786,17 +1029,17 @@
 
   <!-- CTA -->
   <section class="cta">
-    <h2>먼저 1분기,<br>검색 신뢰 정비부터<br>가볍게 시작해보시죠.</h2>
+    <h2>먼저 공식 안내 페이지부터,<br>가볍게 시작해보시죠.</h2>
     <p>전체를 한 번에 결정하지 않으셔도 됩니다.
-    1분기 정비 후 검색면이 어떻게 정리되는지 확인하고,
-    다음 단계는 그때 함께 논의하면 됩니다.</p>
+    매장명과 네이버 예약 링크만 주시면 현재 상태를 먼저 확인하고,
+    일시불 구축형과 1년 운영 구독형 중 맞는 방식을 안내드립니다.</p>
     <div class="btns">
-      <a class="btn btn-primary" href="#">1분기 정비 플랜부터 시작하기</a>
-      <a class="btn btn-ghost" href="#">분기별 운영안 상담하기</a>
+      <a class="btn btn-primary" href="#">공식 안내 페이지 구축부터 시작하기</a>
+      <a class="btn btn-ghost" href="#">구축 + 1년 운영안 상담하기</a>
     </div>
     <div class="contact">
-      Weplace · 검색 신뢰 강화 &amp; 예약 전환 운영<br>
-      담당 / 연락처 — [ 박규민, 010-6461-6594 ]
+      Weplace · 매장 공식 안내 페이지 + 검색 신뢰·예약 전환 운영<br>
+      담당 / 연락처 — [ placeholder ]
     </div>
   </section>
 
